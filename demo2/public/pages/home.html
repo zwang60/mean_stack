@@ -1,0 +1,28 @@
+<h1>Home Page</h1>
+
+<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="person in persons">
+			<td>{{person.name}}</td>
+			<td>{{person.age}}</td>
+			<td>
+				<a ng-href="/#/update/{{person._id}}">Update</a>
+			</td>
+			<td>
+				<a ng-href="/#/delete/{{person._id}}">Delete</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+	<a href="/#/add" class="btn btn-default">Add a Person</a>
+
+</div>
